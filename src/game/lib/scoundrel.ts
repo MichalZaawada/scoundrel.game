@@ -1,24 +1,6 @@
-export type Suit = 'hearts' | 'diamonds' | 'clubs' | 'spades'
-export type CardType = 'monster' | 'weapon' | 'potion'
-
-export interface Card {
-  id: string
-  suit: Suit
-  value: number
-}
-
-export interface GameState {
-  deck: Card[]
-  room: Card[]
-  health: number
-  weapon: Card | null
-  lastPotion: boolean
-}
-
-export interface ActionResult {
-  success: boolean
-  message?: string
-}
+import { type Card, type Suit } from '../types/card'
+import { type CardType } from '../types/cardType'
+import { type ActionResult, type GameState } from '../types/state'
 
 const suits: Suit[] = ['hearts', 'diamonds', 'clubs', 'spades']
 

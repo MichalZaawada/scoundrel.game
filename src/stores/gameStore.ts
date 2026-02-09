@@ -3,9 +3,9 @@ import {
   applyCardChoice,
   fleeRoom,
   initializeGame,
-  type Card,
-  type GameState,
-} from '../lib/scoundrel'
+} from '../game/lib/scoundrel'
+import { type Card } from '../game/types/card'
+import { type GameState } from '../game/types/state'
 
 interface GameStore {
   state: GameState
