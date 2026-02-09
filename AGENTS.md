@@ -9,7 +9,8 @@ Single-player deck-based dungeon crawler with permadeath mechanics.
 - **Build Tool**: Vite
 - **Package Manager**: pnpm
 - **Language**: TypeScript (strict mode)
-- **Styling**: CSS
+- **Styling**: Tailwind CSS
+
 - **State**: Zustand
 
 ## Project Structure
@@ -50,6 +51,13 @@ src/
 - Card: Card → draggable/clickable, shows suit + value
 
 - Modals: RunEndModal, HelpModal → portal-based
+
+### Vertical Slice Architecture
+
+- Features live in `src/game/` with `lib/`, `store/`, `types/`, and `components/` scoped together.
+- Shared UI primitives go in `src/ui/`; cross-feature helpers stay in `src/lib/`.
+- Prefer importing types and logic from the slice first, then shared folders if needed.
+
 
 ### Performance
 
