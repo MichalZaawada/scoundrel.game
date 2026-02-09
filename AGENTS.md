@@ -9,12 +9,26 @@ Single-player deck-based dungeon crawler with permadeath mechanics.
 - **Build Tool**: Vite
 - **Package Manager**: pnpm
 - **Language**: TypeScript (strict mode)
-- **Styling**:  Tailwind 
+- **Styling**: CSS
 - **State**: Zustand
 
 ## Project Structure
 
-TODO: Add project structure details
+src/
+  App.tsx
+  main.tsx
+  assets/
+  components/
+  ui/
+  game/
+    lib/
+    store/
+    types/
+  hooks/
+  stores/
+  lib/
+  types/
+
 
 ## Key Rules
 
@@ -47,7 +61,7 @@ TODO: Add project structure details
 
 ### Game Logic Location
 
-- Pure functions in lib/scoundrel.ts
+- Pure functions in game/lib/scoundrel.ts
 
 - No React in game logic files
 
