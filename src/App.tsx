@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { useGameStore } from './stores/gameStore'
 import { getCardType } from './game/lib/scoundrel'
+import { PixiRoom } from './game/components/PixiRoom'
 import { type Card, type Suit } from './game/types/card'
 import { type CardType } from './game/types/cardType'
 import { type RoomSummaryEntry } from './types/game'
@@ -151,6 +152,10 @@ const App = (): React.JSX.Element => {
             {state.room.length === 0 && (
               <div className="mt-4 text-xs italic text-slate-300">The dungeon is cleared.</div>
             )}
+          </section>
+
+          <section>
+            <PixiRoom room={state.room} onSelect={selectCard} disabled={isGameOver} />
           </section>
 
           <section className="grid gap-6 md:grid-cols-2">
